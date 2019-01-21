@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 // import { ListGroup, Container } from 'reactstrap';
-import {
-    maxMinArr,
-    sortedArr
-} from '../data/dataParser';
+
+
 
 class WeatherList extends Component {
+
+
+
     render() {
         return (
             <div>
-                {console.log(maxMinArr, sortedArr)}
+                <button id='dataLoader'>Load Data</button>
             </div >
         );
     }
