@@ -6,7 +6,7 @@ const { arrCleaner } = require('../utils/arrCleaner');
 const { arrTrimmer } = require('../utils/arrTrimmer')
 const { maxMinArrBuilder } = require('../utils/maxMinArrBuilder')
 const { findDifference } = require('../utils/findDifference')
-const { sortedArray } = require('../utils/sortedArray')
+
 
 
 
@@ -14,12 +14,13 @@ let weatherData = fs.readFileSync('server/data/weather.dat', 'utf8').toString("u
   return i.split(" ");
 });
 
+//Clean Data
+
 let cleanedArr = arrCleaner(weatherData);
-
 let trimmedArr = arrTrimmer(cleanedArr);
-
-let data = maxMinArrBuilder(trimmedArr);
-
+let maxMinArr = maxMinArrBuilder(trimmedArr);
+let addDifference = findDifference(maxMinArr);
+let data = JSON.stringify(addDifference);
 
 router.get('/', (req, res) => {
   res.send(data)

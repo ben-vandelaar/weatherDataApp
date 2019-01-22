@@ -1,9 +1,10 @@
 import request from "superagent";
 
 export const receiveData = data => {
+  let text = JSON.parse(data.text);
   return {
     type: "WEATHER_DATA",
-    data: data.text
+    data: text
   };
 };
 
@@ -12,7 +13,8 @@ export function getWeather() {
     return request
       .get("/api/weather")
       .then(res => {
-        dispatch(receiveData(res));
+        dispatch(receiveData(res)
+        )
       })
       .then()
       .catch(() => {
