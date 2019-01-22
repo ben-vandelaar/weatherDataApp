@@ -1,4 +1,4 @@
-function weatherData (state = '', action) {
+function weatherData(state = '', action) {
   switch (action.type) {
     case "WEATHER_DATA":
       return action.data

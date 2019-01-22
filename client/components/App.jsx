@@ -14,9 +14,9 @@ class App extends React.Component {
   }
 
 
-
   render() {
     const { weatherData } = this.props;
+
     return (
       <div>
         <h1>Little Weather App</h1>

@@ -4,8 +4,10 @@ function findDifference(arr) {
         let a = arr[i][1];
         let b = arr[i][2];
         let difference = Math.abs(a - b);
-    return arr[i].push(difference);
-    }   
+        return arr[i].push(difference);
+    }
 }
 
-export default findDifference
+module.exports = {
+    findDifference
+}

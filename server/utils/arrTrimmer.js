@@ -1,10 +1,14 @@
 //Trim the arrays getting rid of the title the empty space and the Average
 function arrTrimmer(arr) {
+    let trimmedArr = []
     for (let i = 0; i < arr.length; i++) {
         if (i > 1 && i < 32) {
-        return trimedArr.push(arr[i]);
+            trimmedArr.push(arr[i]);
         }
     }
+    return trimmedArr
 }
 
-export default arrTrimmer
+module.exports = {
+    arrTrimmer
+}

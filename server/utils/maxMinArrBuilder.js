@@ -1,5 +1,6 @@
 //Create a 2d array [[day,max,min]]
 function maxMinArrBuilder(arr) {
+    let maxMinArr = [];
     for (let i = 0; i < arr.length; i++) {
         maxMinArr.push([])
         for (let j = 0; j < 3; j++) {
@@ -12,7 +13,10 @@ function maxMinArrBuilder(arr) {
             }
         }
     }
+    return maxMinArr;
 }
 
 
-export default maxMinArrBuilder
+module.exports = {
+    maxMinArrBuilder
+}
